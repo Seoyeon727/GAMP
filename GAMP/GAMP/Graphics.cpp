@@ -33,7 +33,7 @@ Sprite::~Sprite() {
 }
 
 // 텍스처를 화면에 그리기
-void Sprite::draw(SDL_Renderer* renderer, int x, int y, int width, int height) {
+void Sprite::draw(SDL_Renderer* renderer, int x, int y, int width, int height) const { // const 한정자 추가
     if (!loaded) return;
 
     SDL_Rect destRect = { x, y, width, height };
@@ -63,7 +63,7 @@ Graphics::~Graphics() {
 
 // 배경 그리기
 void Graphics::drawBackground(const Sprite& background) {
-    background.draw(renderer, 0, 0, 800, 600); // 예시로 전체 화면에 그리기
+    background.draw(renderer, 0, 0, 800, 600); // 전체 화면에 배경 그리기
 }
 
 // 인터페이스 그리기
@@ -72,13 +72,13 @@ void Graphics::drawInterface() {
 }
 
 // 플레이어 그리기
-void Graphics::drawPlayer(const Sprite& playerSprite, int x, int y) {
-    playerSprite.draw(renderer, x, y, 50, 50); // 플레이어 스프라이트 그리기 (예시)
+void Graphics::drawPlayer(const Sprite& playerSprite, int x, int y, int width, int height) {
+    playerSprite.draw(renderer, x, y, width, height); // 플레이어 스프라이트 그리기
 }
 
 // 적 그리기
-void Graphics::drawEnemy(const Sprite& enemySprite, int x, int y) {
-    enemySprite.draw(renderer, x, y, 50, 50); // 적 스프라이트 그리기 (예시)
+void Graphics::drawEnemy(const Sprite& enemySprite, int x, int y, int width, int height) {
+    enemySprite.draw(renderer, x, y, width, height); // 적 스프라이트 그리기
 }
 
 // 텍스트 그리기

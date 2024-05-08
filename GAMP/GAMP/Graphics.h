@@ -12,7 +12,7 @@ public:
     Sprite(const std::string& imagePath, SDL_Renderer* renderer);
     ~Sprite();
 
-    void draw(SDL_Renderer* renderer, int x, int y, int width, int height);
+    void draw(SDL_Renderer* renderer, int x, int y, int width, int height) const; // const 한정자 추가
     bool isLoaded() const;
 
 private:
@@ -29,8 +29,8 @@ public:
     // 배경 및 인터페이스 그리기
     void drawBackground(const Sprite& background);
     void drawInterface();
-    void drawPlayer(const Sprite& playerSprite, int x, int y);
-    void drawEnemy(const Sprite& enemySprite, int x, int y);
+    void drawPlayer(const Sprite& playerSprite, int x, int y, int width, int height);
+    void drawEnemy(const Sprite& enemySprite, int x, int y, int width, int height);
     void drawText(const std::string& text, int x, int y);
 
 private:
