@@ -4,22 +4,27 @@
 
 #include <SDL.h>
 
-// 게임 오브젝트의 기본 클래스
 class GameObject {
 public:
-    // 생성자와 소멸자
-    GameObject(int x, int y, bool isPlayer);
+    // 생성자
+    GameObject(int x, int y, bool isPlayer = false);
+
+    // 소멸자 선언
     virtual ~GameObject();
 
-    // 업데이트 및 렌더링 함수
+    // 멤버 함수 선언
     virtual void update();
     virtual void render(SDL_Renderer* renderer);
+    virtual bool collide(const GameObject& other);
 
-    // 오브젝트의 속성
+    // 멤버 변수
     int x, y;
     bool isPlayer;
     bool isDead;
+    bool isShield;
+    bool isBooster;
     int speed;
 };
 
 #endif
+

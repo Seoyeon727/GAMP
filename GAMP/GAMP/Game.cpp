@@ -1,27 +1,6 @@
 #include "Game.h"
 #include <iostream>
 
-// 게임 오브젝트 생성자
-GameObject::GameObject(int x, int y, bool isPlayer)
-    : x(x), y(y), isPlayer(isPlayer), isDead(false), isShield(false), isBooster(false), speed(5) {
-}
-
-// 게임 오브젝트 업데이트 로직
-void GameObject::update() {
-    // 플레이어의 위치를 업데이트하거나 다른 오브젝트의 움직임을 처리
-}
-
-// 게임 오브젝트 렌더링
-void GameObject::render(SDL_Renderer* renderer) {
-    // SDL을 사용하여 오브젝트를 화면에 그리는 작업
-}
-
-// 충돌 검사
-bool GameObject::collide(const GameObject& other) {
-    // 간단한 충돌 검사 알고리즘
-    return false;
-}
-
 // Game 클래스 생성자
 Game::Game()
     : window(nullptr), renderer(nullptr), isRunning(false), screenWidth(800), screenHeight(600), speed(5) {

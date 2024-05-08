@@ -10,10 +10,14 @@ GameObject::~GameObject() {
     // 리소스 해제 로직이 필요한 경우 여기에 작성
 }
 
-// 업데이트 함수
+// 기타 멤버 함수 정의
 void GameObject::update() {
-    // 오브젝트의 상태를 업데이트
-    x += speed; // 예시로 오른쪽으로 이동
+    // 상태 업데이트
+}
+
+bool GameObject::collide(const GameObject& other) {
+    // 충돌 여부 판단
+    return false;
 }
 
 // 렌더링 함수
