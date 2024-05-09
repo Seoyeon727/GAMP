@@ -1,0 +1,218 @@
+﻿  AnimatedCoin.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'AnimatedCoin.cpp'을(를) 컴파일하는 중)
+  
+  AnimatedObject.cpp
+  AnimatedText.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'AnimatedText.cpp'을(를) 컴파일하는 중)
+  
+  Block.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Block.cpp'을(를) 컴파일하는 중)
+  
+  BonusObject.cpp
+  Boss.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Boss.cpp'을(를) 컴파일하는 중)
+  
+  Bush.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Bush.cpp'을(를) 컴파일하는 중)
+  
+  Camera.cpp
+  Castle.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Castle.cpp'을(를) 컴파일하는 중)
+  
+  CheckPoint.cpp
+  Cloud.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Cloud.cpp'을(를) 컴파일하는 중)
+  
+  CloudBombardier.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'CloudBombardier.cpp'을(를) 컴파일하는 중)
+  
+  Coin.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Coin.cpp'을(를) 컴파일하는 중)
+  
+  CollisionHandling.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'CollisionHandling.cpp'을(를) 컴파일하는 중)
+  
+  Creature.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Creature.cpp'을(를) 컴파일하는 중)
+  
+  CrushedCreature.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'CrushedCreature.cpp'을(를) 컴파일하는 중)
+  
+  CustomSummerDecoration.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'CustomSummerDecoration.cpp'을(를) 컴파일하는 중)
+  
+  CustomWinterDecoration.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'CustomWinterDecoration.cpp'을(를) 컴파일하는 중)
+  
+  DestroyedBombardier.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'DestroyedBombardier.cpp'을(를) 컴파일하는 중)
+  
+  DestroyedBoss.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'DestroyedBoss.cpp'을(를) 컴파일하는 중)
+  
+  컴파일하고 있습니다...
+  DestroyedCreature.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'DestroyedCreature.cpp'을(를) 컴파일하는 중)
+  
+  DestroyedFish.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'DestroyedFish.cpp'을(를) 컴파일하는 중)
+  
+  DestroyedTurtle.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'DestroyedTurtle.cpp'을(를) 컴파일하는 중)
+  
+  Explosion.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Explosion.cpp'을(를) 컴파일하는 중)
+  
+  FileNotLoadedException.cpp
+  FireBall.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'FireBall.cpp'을(를) 컴파일하는 중)
+  
+  FireMissle.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'FireMissle.cpp'을(를) 컴파일하는 중)
+  
+  FireSerpent.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'FireSerpent.cpp'을(를) 컴파일하는 중)
+  
+  Flag.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Flag.cpp'을(를) 컴파일하는 중)
+  
+  Flower.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Flower.cpp'을(를) 컴파일하는 중)
+  
+  GameFunctions.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'GameFunctions.cpp'을(를) 컴파일하는 중)
+  
+  InanimateObject.cpp
+  JumpingFish.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'JumpingFish.cpp'을(를) 컴파일하는 중)
+  
+  KeyboardController.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'KeyboardController.cpp'을(를) 컴파일하는 중)
+  
+  Lava.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Lava.cpp'을(를) 컴파일하는 중)
+  
+  Level.cpp
+  AnimationsPlayer.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'AnimationsPlayer.cpp'을(를) 컴파일하는 중)
+  
+  MovingObject.cpp
+  main.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+  MenuManager.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'MenuManager.cpp'을(를) 컴파일하는 중)
+  
+  컴파일하고 있습니다...
+  Movement.cpp
+  Mushroom.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Mushroom.cpp'을(를) 컴파일하는 중)
+  
+  Plant.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Plant.cpp'을(를) 컴파일하는 중)
+  
+  Platform.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Platform.cpp'을(를) 컴파일하는 중)
+  
+  Player.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Player.cpp'을(를) 컴파일하는 중)
+  
+  Position.cpp
+  PreloadingImages.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'PreloadingImages.cpp'을(를) 컴파일하는 중)
+  
+  Princess.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Princess.cpp'을(를) 컴파일하는 중)
+  
+  RedTurtle.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'RedTurtle.cpp'을(를) 컴파일하는 중)
+  
+  Rock.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Rock.cpp'을(를) 컴파일하는 중)
+  
+  Screen.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Screen.cpp'을(를) 컴파일하는 중)
+  
+  SDL_Utility.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'SDL_Utility.cpp'을(를) 컴파일하는 중)
+  
+  Shards.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Shards.cpp'을(를) 컴파일하는 중)
+  
+  Shell.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Shell.cpp'을(를) 컴파일하는 중)
+  
+  Size.cpp
+  Snowflake.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Snowflake.cpp'을(를) 컴파일하는 중)
+  
+  SoundController.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'SoundController.cpp'을(를) 컴파일하는 중)
+  
+  Star.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Star.cpp'을(를) 컴파일하는 중)
+  
+  Button.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SDL_Utility.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  (소스 파일 'Button.cpp'을(를) 컴파일하는 중)
+  
+  Turtle.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'Turtle.cpp'을(를) 컴파일하는 중)
+  
+  컴파일하고 있습니다...
+  World.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'World.cpp'을(를) 컴파일하는 중)
+  
+  WorldInteractionFunctions.cpp
+C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\Mario\SoundController.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'SDL_mixer.h': No such file or directory
+  (소스 파일 'WorldInteractionFunctions.cpp'을(를) 컴파일하는 중)
+  
