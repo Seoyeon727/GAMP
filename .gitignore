@@ -15,6 +15,10 @@
 *.so
 *.dylib
 *.dll
+!SDL2.dll
+!SDL2_image.dll
+!SDL2_mixer.dll
+!SDL2_ttf.dll
 
 # Fortran module files
 *.mod
@@ -25,6 +29,12 @@
 *.la
 *.a
 *.lib
+!SDL2.lib
+!SDL2_image.lib
+!SDL2_mixer.lib
+!SDL2_ttf.lib
+!SDL2main.lib
+!SDL2test.lib
 
 # Executables
 *.exe
