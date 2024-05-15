@@ -1,1 +1,78 @@
-﻿  Mario.vcxproj -> C:\Users\rlarl\Downloads\Super-Mario-Bros-game-master\x64\Debug\Mario.exe
+﻿  AnimatedCoin.cpp
+  AnimatedObject.cpp
+  AnimatedText.cpp
+  AnimationsPlayer.cpp
+  Block.cpp
+  BonusObject.cpp
+  Boss.cpp
+  Bush.cpp
+  Button.cpp
+  Castle.cpp
+  CheckPoint.cpp
+  Cloud.cpp
+  CloudBombardier.cpp
+  Coin.cpp
+  CollisionHandling.cpp
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(203,48): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(206,57): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(239,35): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(255,62): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(256,43): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(270,32): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(281,46): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(304,25): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\CollisionHandling.cpp(386,35): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  Creature.cpp
+  CrushedCreature.cpp
+  CustomSummerDecoration.cpp
+  CustomWinterDecoration.cpp
+  DestroyedBombardier.cpp
+  Generating Code...
+  Compiling...
+  DestroyedBoss.cpp
+  DestroyedCreature.cpp
+  DestroyedFish.cpp
+  DestroyedTurtle.cpp
+  Explosion.cpp
+  FireBall.cpp
+  FireMissle.cpp
+  FireSerpent.cpp
+  Flag.cpp
+  Flower.cpp
+  GameFunctions.cpp
+  InanimateObject.cpp
+  IndependentMovingObject.cpp
+  JumpingFish.cpp
+  KeyboardController.cpp
+  Lava.cpp
+  Level.cpp
+  MovingObject.cpp
+  Mushroom.cpp
+  Plant.cpp
+  Generating Code...
+  Compiling...
+  Platform.cpp
+  Player.cpp
+  PreloadingImages.cpp
+  Princess.cpp
+  RedTurtle.cpp
+  Rock.cpp
+  Screen.cpp
+C:\Users\user\Documents\GitHub\GAMP\Mario\Screen.cpp(221,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\Screen.cpp(230,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\Screen.cpp(237,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Shards.cpp
+  Shell.cpp
+  Snowflake.cpp
+  SoundController.cpp
+  Star.cpp
+  TemporaryObject.cpp
+  Turtle.cpp
+  UtilityFunctions.cpp
+  World.cpp
+C:\Users\user\Documents\GitHub\GAMP\Mario\World.cpp(137,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\user\Documents\GitHub\GAMP\Mario\World.cpp(156,42): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  WorldInteractionFunctions.cpp
+  WorldObject.cpp
+  Generating Code...
+  Mario.vcxproj -> C:\Users\user\Documents\GitHub\GAMP\x64\Debug\Mario.exe
