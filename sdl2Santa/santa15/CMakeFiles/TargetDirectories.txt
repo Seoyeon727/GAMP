@@ -1,0 +1,3 @@
+C:/Users/rlarl/Documents/GitHub/GAMP/sdl2Santa/santa15/CMakeFiles/santa15.dir
+C:/Users/rlarl/Documents/GitHub/GAMP/sdl2Santa/santa15/CMakeFiles/ALL_BUILD.dir
+C:/Users/rlarl/Documents/GitHub/GAMP/sdl2Santa/santa15/CMakeFiles/ZERO_CHECK.dir

@@ -1,34 +1,41 @@
-Project (santa15)
-CMake_Minimum_Required (VERSION 3.1)
+cmake_minimum_required(VERSION 3.15...3.21)
+project(santa15)
 
-include(FindPkgConfig)
-pkg_search_module(SDL2 REQUIRED sdl2)
-pkg_search_module(SDL2_MIXER REQUIRED SDL2_mixer)
-pkg_search_module(SDL2_IMAGE REQUIRED SDL2_image)
-pkg_search_module(SDL2_TTF REQUIRED SDL2_ttf)
+# vcpkg toolchain 설정
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+endif()
 
-add_compile_options(-Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g)
+find_package(SDL2 CONFIG REQUIRED)
 
-#Add the include directories of the (found) libraries.
-Include_Directories(
- 	${SDL2_INCLUDE_DIRS}
- 	${SDL2_MIXER_INCLUDE_DIRS}
- 	${SDL2_IMAGE_INCLUDE_DIRS}
- 	${SDL2_TTF_INCLUDE_DIRS}
+# 컴파일러에 따른 플래그 설정
+if (MSVC)
+    # MSVC용 플래그 설정 (경고를 오류로 처리하지 않음)
+    add_compile_options(/W4 /WX-)
+else()
+    # GCC/Clang용 플래그 설정
+    add_compile_options(-Wall -Wempty-body -Werror -Wstrict-prototypes -Werror=maybe-uninitialized -Warray-bounds -g)
+endif()
+
+include_directories(
+    ${SDL2_INCLUDE_DIRS}
 )
 
-file(GLOB SOURCES   src/defs.h src/structs.h src/*.c src/*.h src/*/*.c src/*/*.h)
+file(GLOB SOURCES src/defs.h src/structs.h src/*.c src/*.h src/*/*.c src/*/*.h)
 
-SET (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
 
-Add_Executable (${CMAKE_PROJECT_NAME} ${SOURCES})
-set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 20)
+add_executable(${PROJECT_NAME} ${SOURCES})
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
-Target_Link_Libraries (
- 	${CMAKE_PROJECT_NAME}
- 	${SDL2_LIBRARIES}
- 	${SDL2_MIXER_LIBRARIES}
- 	${SDL2_IMAGE_LIBRARIES}
- 	${SDL2_TTF_LIBRARIES}
- 	m
+target_link_libraries(
+    ${PROJECT_NAME}
+    SDL2::SDL2
+    SDL2::SDL2main
+    m
 )
+
+set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};C:/vcpkg/installed/x64-windows")
+
+
+

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{040DEDD7-5669-3CB8-B328-206DEF5137F6}|ALL_BUILD.vcxproj|C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{040DEDD7-5669-3CB8-B328-206DEF5137F6}|ALL_BUILD.vcxproj|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91807F07-CEC9-31F8-A2A4-F4D08C99CEBB}|santa15.vcxproj|C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\src\\json\\cJSON.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91807F07-CEC9-31F8-A2A4-F4D08C99CEBB}|santa15.vcxproj|solutionrelative:src\\json\\cJSON.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91807F07-CEC9-31F8-A2A4-F4D08C99CEBB}|santa15.vcxproj|C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\src\\system\\draw.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91807F07-CEC9-31F8-A2A4-F4D08C99CEBB}|santa15.vcxproj|solutionrelative:src\\system\\draw.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CMakeLists.txt",
+              "DocumentMoniker": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\CMakeLists.txt",
+              "RelativeDocumentMoniker": "CMakeLists.txt",
+              "ToolTip": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\CMakeLists.txt",
+              "RelativeToolTip": "CMakeLists.txt",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-15T11:12:03.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cJSON.c",
+              "DocumentMoniker": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\src\\json\\cJSON.c",
+              "RelativeDocumentMoniker": "src\\json\\cJSON.c",
+              "ToolTip": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\src\\json\\cJSON.c",
+              "RelativeToolTip": "src\\json\\cJSON.c",
+              "ViewState": "AQIAACEAAAAAAAAAAAAWwCsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-05-15T10:53:27.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "draw.c",
+              "DocumentMoniker": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\src\\system\\draw.c",
+              "RelativeDocumentMoniker": "src\\system\\draw.c",
+              "ToolTip": "C:\\Users\\rlarl\\Documents\\GitHub\\GAMP\\sdl2Santa\\santa15\\src\\system\\draw.c",
+              "RelativeToolTip": "src\\system\\draw.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-05-15T10:51:50.068Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
