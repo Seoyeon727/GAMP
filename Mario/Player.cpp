@@ -329,7 +329,7 @@ bool Player::isAbleToDestroyBlock() const
 	return false;
 }
 
-void Player::moveLeft(World &world)
+void Player::moveLeft(World& world)
 {
 	int alignment = computeHorizontalAlignment(Direction::Left, movement.getSpeed(), *this, world);
 	int distance = movement.getSpeed() - alignment;
@@ -338,44 +338,27 @@ void Player::moveLeft(World &world)
 		position.setX(position.getX() - distance);
 	}
 
-	if (alignment != 0 && stepsCounter.stepsUp == 0) {
-		stepsCounter.stepsLeft = 0;
-	}
-	else {
-		--stepsCounter.stepsLeft;
-	}
-
+	--stepsCounter.stepsLeft;
 	flags.orientationFlag = false;
 }
 
-void Player::moveRight(World &world)
+void Player::moveRight(World& world)
 {
 	int alignment = computeHorizontalAlignment(Direction::Right, movement.getSpeed(), *this, world);
 	int distance = movement.getSpeed() - alignment;
 
 	position.setX(position.getX() + distance);
-
-	if (alignment != 0 && stepsCounter.stepsUp == 0) {
-		stepsCounter.stepsRight = 0;
-	}
-	else {
-		--stepsCounter.stepsRight;
-	}
-
+	--stepsCounter.stepsRight;
 	flags.orientationFlag = true;
 }
 
-void Player::moveUp(World &world)
+
+void Player::moveUp(World& world)
 {
 	int alignment = computeVerticalAlignment(Direction::Up, movement.getVerticalSpeed(), *this, world);
 	int distance = movement.getVerticalSpeed() - alignment;
-	
-	if (distance < 0) {
-		stepsCounter.stepsUp = 0;
-		return;
-	}
 
-	if (!isHittingCeiling(distance)) {
+	if (distance >= 0 && !isHittingCeiling(distance)) {
 		position.setY(position.getY() - distance);
 	}
 	else {
@@ -389,7 +372,7 @@ void Player::moveUp(World &world)
 	else {
 		--stepsCounter.stepsUp;
 	}
-	
+
 	if (isCharacterStandingOnSomething(*this, world)) {
 		model = 0;
 	}
@@ -397,6 +380,7 @@ void Player::moveUp(World &world)
 		flags.inAirFlag = true;
 	}
 }
+
 
 void Player::moveDown(World &world)
 {
@@ -662,7 +646,7 @@ void Player::performAdditionalJump()
 	flags.rejumpFlag = true;
 }
 
-void Player::move(World &world)
+void Player::move(World& world)
 {
 	if (isDuringAnimation()) {
 		changeStateDuringAnimation();
@@ -697,6 +681,7 @@ void Player::move(World &world)
 		flags.downPipeFlag = false;
 	}
 }
+
 
 void Player::setPositionXY(int level)
 {
