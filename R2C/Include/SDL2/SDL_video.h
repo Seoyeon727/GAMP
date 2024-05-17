@@ -56,7 +56,7 @@ typedef struct
     int w;                      /**< width, in screen coordinates */
     int h;                      /**< height, in screen coordinates */
     int refresh_rate;           /**< refresh rate (or zero for unspecified) */
-    void *driverdata;           /**< driver-specific data, initialize to 0 */
+    void *driverdata = NULL;           /**< driver-specific data, initialize to 0 */
 } SDL_DisplayMode;
 
 /**
@@ -216,7 +216,7 @@ typedef enum
 /**
  *  \brief An opaque handle to an OpenGL context.
  */
-typedef void *SDL_GLContext;
+typedef void *SDL_GLContext = NULL;
 
 /**
  *  \brief OpenGL configuration attributes

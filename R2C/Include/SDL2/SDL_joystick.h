@@ -68,7 +68,7 @@ extern "C" {
  * The joystick structure used to identify an SDL joystick
  */
 #ifdef SDL_THREAD_SAFETY_ANALYSIS
-extern SDL_mutex *SDL_joystick_lock;
+extern SDL_mutex *SDL_joystick_lock = NULL;
 #endif
 struct _SDL_Joystick;
 typedef struct _SDL_Joystick SDL_Joystick;
@@ -377,9 +377,9 @@ typedef struct SDL_VirtualJoystickDesc
                              e.g. (1 << SDL_CONTROLLER_BUTTON_A) */
     Uint32 axis_mask;   /**< A mask of which axes are valid for this controller
                              e.g. (1 << SDL_CONTROLLER_AXIS_LEFTX) */
-    const char *name;   /**< the name of the joystick */
+    const char *name = NULL;   /**< the name of the joystick */
 
-    void *userdata;     /**< User data pointer passed to callbacks */
+    void *userdata = NULL;     /**< User data pointer passed to callbacks */
     void (SDLCALL *Update)(void *userdata); /**< Called when the joystick state should be updated */
     void (SDLCALL *SetPlayerIndex)(void *userdata, int player_index); /**< Called when the player index is set */
     int (SDLCALL *Rumble)(void *userdata, Uint16 low_frequency_rumble, Uint16 high_frequency_rumble); /**< Implements SDL_JoystickRumble() */

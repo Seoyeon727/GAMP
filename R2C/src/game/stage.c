@@ -47,7 +47,7 @@ static int          ground[GROUND_WIDTH];
 static AtlasImage  *groundTextures[NUM_GROUND_TEXTURES] = {NULL};
 static double       houseSpawnTimer;
 static int          reset = 0;
-static SDL_Texture *xmasCancelledTexture;
+static SDL_Texture *xmasCancelledTexture = NULL;
 static AtlasImage  *treeTextures[NUM_TREE_TEXTURES];
 static Hills        hillLayers[NUM_HILLS_LAYERS];
 
@@ -88,7 +88,7 @@ void initStage(void)
 
 	objectSpawnTimer = FPS * 5 + ((int)FPS * rand() % 5);
 
-	gameOverTimer = FPS * 5;
+	gameOverTimer = FPS * 5 = NULL;
 
 	app.delegate.logic = doStage;
 	app.delegate.draw = drawStage;
@@ -107,8 +107,8 @@ static void initGround(void)
 static void initHills(void)
 {
 	int    i;
-	Tree  *t;
-	Hills *h;
+	Tree  *t = NULL;
+	Hills *h = NULL;
 
 	memset(&hillLayers, 0, sizeof(Hills) * NUM_HILLS_LAYERS);
 
@@ -227,8 +227,8 @@ static void doHills(void)
 {
 	int    i, j;
 	double x, speed;
-	Hills *h;
-	Tree  *t;
+	Hills *h = NULL;
+	Tree  *t = NULL;
 
 	speed = (stage.speed / 4);
 
@@ -330,8 +330,8 @@ void drawStage(void)
 static void drawHills(void)
 {
 	int    i, j;
-	Hills *h;
-	Tree  *t;
+	Hills *h = NULL;
+	Tree  *t = NULL;
 
 	for (i = 0; i < 24; i++)
 	{

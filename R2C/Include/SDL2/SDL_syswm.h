@@ -104,7 +104,7 @@ typedef Uint32 GLuint;
 
 #if defined(SDL_VIDEO_DRIVER_ANDROID)
 typedef struct ANativeWindow ANativeWindow;
-typedef void *EGLSurface;
+typedef void *EGLSurface = NULL;
 #endif
 
 #if defined(SDL_VIDEO_DRIVER_VIVANTE)
@@ -240,22 +240,22 @@ struct SDL_SysWMinfo
 #if defined(SDL_VIDEO_DRIVER_WINRT)
         struct
         {
-            IInspectable * window;      /**< The WinRT CoreWindow */
+            IInspectable * window = NULL;      /**< The WinRT CoreWindow */
         } winrt;
 #endif
 #if defined(SDL_VIDEO_DRIVER_X11)
         struct
         {
-            Display *display;           /**< The X11 display */
+            Display *display = NULL;           /**< The X11 display */
             Window window;              /**< The X11 window */
         } x11;
 #endif
 #if defined(SDL_VIDEO_DRIVER_DIRECTFB)
         struct
         {
-            IDirectFB *dfb;             /**< The directfb main interface */
-            IDirectFBWindow *window;    /**< The directfb window handle */
-            IDirectFBSurface *surface;  /**< The directfb client surface */
+            IDirectFB *dfb = NULL;             /**< The directfb main interface */
+            IDirectFBWindow *window = NULL;    /**< The directfb window handle */
+            IDirectFBSurface *surface = NULL;  /**< The directfb client surface */
         } dfb;
 #endif
 #if defined(SDL_VIDEO_DRIVER_COCOA)
@@ -263,12 +263,12 @@ struct SDL_SysWMinfo
         {
 #if defined(__OBJC__) && defined(__has_feature)
         #if __has_feature(objc_arc)
-            NSWindow __unsafe_unretained *window; /**< The Cocoa window */
+            NSWindow __unsafe_unretained *window = NULL; /**< The Cocoa window */
         #else
-            NSWindow *window;                     /**< The Cocoa window */
+            NSWindow *window = NULL;                     /**< The Cocoa window */
         #endif
 #else
-            NSWindow *window;                     /**< The Cocoa window */
+            NSWindow *window = NULL;                     /**< The Cocoa window */
 #endif
         } cocoa;
 #endif
@@ -277,12 +277,12 @@ struct SDL_SysWMinfo
         {
 #if defined(__OBJC__) && defined(__has_feature)
         #if __has_feature(objc_arc)
-            UIWindow __unsafe_unretained *window; /**< The UIKit window */
+            UIWindow __unsafe_unretained *window = NULL; /**< The UIKit window */
         #else
-            UIWindow *window;                     /**< The UIKit window */
+            UIWindow *window = NULL;                     /**< The UIKit window */
         #endif
 #else
-            UIWindow *window;                     /**< The UIKit window */
+            UIWindow *window = NULL;                     /**< The UIKit window */
 #endif
             GLuint framebuffer; /**< The GL view's Framebuffer Object. It must be bound when rendering to the screen using GL. */
             GLuint colorbuffer; /**< The GL view's color Renderbuffer Object. It must be bound when SDL_GL_SwapWindow is called. */
@@ -292,28 +292,28 @@ struct SDL_SysWMinfo
 #if defined(SDL_VIDEO_DRIVER_WAYLAND)
         struct
         {
-            struct wl_display *display;             /**< Wayland display */
-            struct wl_surface *surface;             /**< Wayland surface */
-            void *shell_surface;                    /**< DEPRECATED Wayland shell_surface (window manager handle) */
-            struct wl_egl_window *egl_window;       /**< Wayland EGL window (native window) */
-            struct xdg_surface *xdg_surface;        /**< Wayland xdg surface (window manager handle) */
-            struct xdg_toplevel *xdg_toplevel;      /**< Wayland xdg toplevel role */
-            struct xdg_popup *xdg_popup;            /**< Wayland xdg popup role */
-            struct xdg_positioner *xdg_positioner;  /**< Wayland xdg positioner, for popup */
+            struct wl_display *display = NULL;             /**< Wayland display */
+            struct wl_surface *surface = NULL;             /**< Wayland surface */
+            void *shell_surface = NULL;                    /**< DEPRECATED Wayland shell_surface (window manager handle) */
+            struct wl_egl_window *egl_window = NULL;       /**< Wayland EGL window (native window) */
+            struct xdg_surface *xdg_surface = NULL;        /**< Wayland xdg surface (window manager handle) */
+            struct xdg_toplevel *xdg_toplevel = NULL;      /**< Wayland xdg toplevel role */
+            struct xdg_popup *xdg_popup = NULL;            /**< Wayland xdg popup role */
+            struct xdg_positioner *xdg_positioner = NULL;  /**< Wayland xdg positioner, for popup */
         } wl;
 #endif
 #if defined(SDL_VIDEO_DRIVER_MIR)  /* no longer available, left for API/ABI compatibility. Remove in 2.1! */
         struct
         {
-            void *connection;  /**< Mir display server connection */
-            void *surface;  /**< Mir surface */
+            void *connection = NULL;  /**< Mir display server connection */
+            void *surface = NULL;  /**< Mir surface */
         } mir;
 #endif
 
 #if defined(SDL_VIDEO_DRIVER_ANDROID)
         struct
         {
-            ANativeWindow *window;
+            ANativeWindow *window = NULL;
             EGLSurface surface;
         } android;
 #endif
@@ -339,7 +339,7 @@ struct SDL_SysWMinfo
         {
             int dev_index;               /**< Device index (ex: the X in /dev/dri/cardX) */
             int drm_fd;                  /**< DRM FD (unavailable on Vulkan windows) */
-            struct gbm_device *gbm_dev;  /**< GBM device (unavailable on Vulkan windows) */
+            struct gbm_device *gbm_dev = NULL;  /**< GBM device (unavailable on Vulkan windows) */
         } kmsdrm;
 #endif
 

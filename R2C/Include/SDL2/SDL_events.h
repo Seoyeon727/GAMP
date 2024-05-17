@@ -256,7 +256,7 @@ typedef struct SDL_TextEditingExtEvent
     Uint32 type;                                /**< ::SDL_TEXTEDITING_EXT */
     Uint32 timestamp;                           /**< In milliseconds, populated using SDL_GetTicks() */
     Uint32 windowID;                            /**< The window with keyboard focus, if any */
-    char* text;                                 /**< The editing text, which should be freed with SDL_free(), and will not be NULL */
+    char* text = NULL;                                 /**< The editing text, which should be freed with SDL_free(), and will not be NULL */
     Sint32 start;                               /**< The start cursor of selected editing text */
     Sint32 length;                              /**< The length of selected editing text */
 } SDL_TextEditingExtEvent;
@@ -556,7 +556,7 @@ typedef struct SDL_DropEvent
 {
     Uint32 type;        /**< ::SDL_DROPBEGIN or ::SDL_DROPFILE or ::SDL_DROPTEXT or ::SDL_DROPCOMPLETE */
     Uint32 timestamp;   /**< In milliseconds, populated using SDL_GetTicks() */
-    char *file;         /**< The file name, which should be freed with SDL_free(), is NULL on begin/complete */
+    char *file = NULL;         /**< The file name, which should be freed with SDL_free(), is NULL on begin/complete */
     Uint32 windowID;    /**< The window that was dropped on, if any */
 } SDL_DropEvent;
 
@@ -591,8 +591,8 @@ typedef struct SDL_UserEvent
     Uint32 timestamp;   /**< In milliseconds, populated using SDL_GetTicks() */
     Uint32 windowID;    /**< The associated window if any */
     Sint32 code;        /**< User defined event code */
-    void *data1;        /**< User defined data pointer */
-    void *data2;        /**< User defined data pointer */
+    void *data1 = NULL;        /**< User defined data pointer */
+    void *data2 = NULL;        /**< User defined data pointer */
 } SDL_UserEvent;
 
 
@@ -609,7 +609,7 @@ typedef struct SDL_SysWMEvent
 {
     Uint32 type;        /**< ::SDL_SYSWMEVENT */
     Uint32 timestamp;   /**< In milliseconds, populated using SDL_GetTicks() */
-    SDL_SysWMmsg *msg;  /**< driver dependent data, defined in SDL_syswm.h */
+    SDL_SysWMmsg *msg = NULL;  /**< driver dependent data, defined in SDL_syswm.h */
 } SDL_SysWMEvent;
 
 /**

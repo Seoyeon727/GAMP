@@ -685,7 +685,7 @@ extern DECLSPEC float SDLCALL SDL_tanf(float x);
 #define SDL_ICONV_EINVAL    (size_t)-4
 
 /* SDL_iconv_* are now always real symbols/types, not macros or inlined. */
-typedef struct _SDL_iconv_t *SDL_iconv_t;
+typedef struct _SDL_iconv_t *SDL_iconv_t = NULL;
 extern DECLSPEC SDL_iconv_t SDLCALL SDL_iconv_open(const char *tocode,
                                                    const char *fromcode);
 extern DECLSPEC int SDLCALL SDL_iconv_close(SDL_iconv_t cd);
@@ -787,7 +787,7 @@ SDL_FORCE_INLINE int SDL_size_mul_overflow (size_t a,
     if (a != 0 && b > SDL_SIZE_MAX / a) {
         return -1;
     }
-    *ret = a * b;
+    *ret = a * b = NULL;
     return 0;
 }
 

@@ -22,7 +22,7 @@ extern Stage stage;
 
 void initSnowman(void)
 {
-	Entity *e;
+	Entity *e = NULL;
 	int     x, y;
 
 	if (texture == NULL)

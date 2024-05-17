@@ -187,7 +187,7 @@ typedef struct SDL_AudioSpec
     Uint16 padding;             /**< Necessary for some compile environments */
     Uint32 size;                /**< Audio buffer size in bytes (calculated) */
     SDL_AudioCallback callback; /**< Callback that feeds the audio device (NULL to use SDL_QueueAudio()). */
-    void *userdata;             /**< Userdata passed to callback (ignored for NULL callbacks). */
+    void *userdata = NULL;             /**< Userdata passed to callback (ignored for NULL callbacks). */
 } SDL_AudioSpec;
 
 
@@ -234,7 +234,7 @@ typedef struct SDL_AudioCVT
     SDL_AudioFormat src_format; /**< Source audio format */
     SDL_AudioFormat dst_format; /**< Target audio format */
     double rate_incr;           /**< Rate conversion increment */
-    Uint8 *buf;                 /**< Buffer to hold entire audio data */
+    Uint8 *buf = NULL;                 /**< Buffer to hold entire audio data */
     int len;                    /**< Length of original audio buffer */
     int len_cvt;                /**< Length of converted audio buffer */
     int len_mult;               /**< buffer must be len*len_mult big */

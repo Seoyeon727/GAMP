@@ -38,7 +38,7 @@
  *
  * \par Simple rumble example:
  * \code
- *    SDL_Haptic *haptic;
+ *    SDL_Haptic *haptic = NULL;
  *
  *    // Open the device
  *    haptic = SDL_HapticOpen( 0 );
@@ -61,7 +61,7 @@
  * \par Complete example:
  * \code
  * int test_haptic( SDL_Joystick * joystick ) {
- *    SDL_Haptic *haptic;
+ *    SDL_Haptic *haptic = NULL;
  *    SDL_HapticEffect effect;
  *    int effect_id;
  *
@@ -728,7 +728,7 @@ typedef struct SDL_HapticCustom
     Uint8 channels;         /**< Axes to use, minimum of one. */
     Uint16 period;          /**< Sample periods. */
     Uint16 samples;         /**< Amount of samples. */
-    Uint16 *data;           /**< Should contain channels*samples items. */
+    Uint16 *data = NULL;           /**< Should contain channels*samples items. */
 
     /* Envelope */
     Uint16 attack_length;   /**< Duration of the attack. */

@@ -59,7 +59,7 @@ typedef struct
 {
     Uint32 flags;       /**< ::SDL_MessageBoxButtonFlags */
     int buttonid;       /**< User defined button id (value returned via SDL_ShowMessageBox) */
-    const char * text;  /**< The UTF-8 button text */
+    const char * text = NULL;  /**< The UTF-8 button text */
 } SDL_MessageBoxButtonData;
 
 /**
@@ -94,14 +94,14 @@ typedef struct
 typedef struct
 {
     Uint32 flags;                       /**< ::SDL_MessageBoxFlags */
-    SDL_Window *window;                 /**< Parent window, can be NULL */
-    const char *title;                  /**< UTF-8 title */
-    const char *message;                /**< UTF-8 message text */
+    SDL_Window *window = NULL;                 /**< Parent window, can be NULL */
+    const char *title = NULL;                  /**< UTF-8 title */
+    const char *message = NULL;                /**< UTF-8 message text */
 
     int numbuttons;
-    const SDL_MessageBoxButtonData *buttons;
+    const SDL_MessageBoxButtonData *buttons = NULL;
 
-    const SDL_MessageBoxColorScheme *colorScheme;   /**< ::SDL_MessageBoxColorScheme, can be NULL to use system settings */
+    const SDL_MessageBoxColorScheme *colorScheme = NULL;   /**< ::SDL_MessageBoxColorScheme, can be NULL to use system settings */
 } SDL_MessageBoxData;
 
 /**

@@ -19,7 +19,7 @@ void initHighscores(void)
 {
 	char      *defaultNames[] = {"Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Rudolph", "Sven"};
 	int        i;
-	Highscore *h;
+	Highscore *h = NULL;
 
 	memset(&game.highscores, 0, sizeof(Highscore) * NUM_HIGHSCORES);
 
@@ -32,7 +32,7 @@ void initHighscores(void)
 void drawHighScores(void)
 {
 	int        i, y, r, g, b;
-	Highscore *h;
+	Highscore *h = NULL;
 	char       text[16];
 
 	app.fontScale = 1.25;
@@ -66,7 +66,7 @@ void drawHighScores(void)
 
 void addHighscore(void)
 {
-	Highscore *h;
+	Highscore *h = NULL;
 	int        i;
 	long       t;
 

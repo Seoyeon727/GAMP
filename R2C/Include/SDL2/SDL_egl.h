@@ -402,9 +402,9 @@ typedef enum {
 
 #if defined(EGL_NO_PLATFORM_SPECIFIC_TYPES)
 
-typedef void *EGLNativeDisplayType;
-typedef void *EGLNativePixmapType;
-typedef void *EGLNativeWindowType;
+typedef void *EGLNativeDisplayType = NULL;
+typedef void *EGLNativePixmapType = NULL;
+typedef void *EGLNativeWindowType = NULL;
 
 #elif defined(_WIN32) || defined(__VC32__) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__) /* Win32 and WinCE */
 #ifndef WIN32_LEAN_AND_MEAN
@@ -425,29 +425,29 @@ typedef int EGLNativeWindowType;
 #elif defined(__WINSCW__) || defined(__SYMBIAN32__)  /* Symbian */
 
 typedef int   EGLNativeDisplayType;
-typedef void *EGLNativePixmapType;
-typedef void *EGLNativeWindowType;
+typedef void *EGLNativePixmapType = NULL;
+typedef void *EGLNativeWindowType = NULL;
 
 #elif defined(WL_EGL_PLATFORM)
 
-typedef struct wl_display     *EGLNativeDisplayType;
-typedef struct wl_egl_pixmap  *EGLNativePixmapType;
-typedef struct wl_egl_window  *EGLNativeWindowType;
+typedef struct wl_display     *EGLNativeDisplayType = NULL;
+typedef struct wl_egl_pixmap  *EGLNativePixmapType = NULL;
+typedef struct wl_egl_window  *EGLNativeWindowType = NULL;
 
 #elif defined(__GBM__)
 
-typedef struct gbm_device  *EGLNativeDisplayType;
-typedef struct gbm_bo      *EGLNativePixmapType;
-typedef void               *EGLNativeWindowType;
+typedef struct gbm_device  *EGLNativeDisplayType = NULL;
+typedef struct gbm_bo      *EGLNativePixmapType = NULL;
+typedef void               *EGLNativeWindowType = NULL;
 
 #elif defined(__ANDROID__) || defined(ANDROID)
 
 struct ANativeWindow;
 struct egl_native_pixmap_t;
 
-typedef void*                           EGLNativeDisplayType;
-typedef struct egl_native_pixmap_t*     EGLNativePixmapType;
-typedef struct ANativeWindow*           EGLNativeWindowType;
+typedef void*                           EGLNativeDisplayType = NULL;
+typedef struct egl_native_pixmap_t*     EGLNativePixmapType = NULL;
+typedef struct ANativeWindow*           EGLNativeWindowType = NULL;
 
 #elif defined(USE_OZONE)
 
@@ -461,33 +461,33 @@ typedef intptr_t EGLNativeWindowType;
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 
-typedef Display *EGLNativeDisplayType;
+typedef Display *EGLNativeDisplayType = NULL;
 typedef Pixmap   EGLNativePixmapType;
 typedef Window   EGLNativeWindowType;
 
 #elif defined(__unix__)
 
-typedef void             *EGLNativeDisplayType;
+typedef void             *EGLNativeDisplayType = NULL;
 typedef khronos_uintptr_t EGLNativePixmapType;
 typedef khronos_uintptr_t EGLNativeWindowType;
 
 #elif defined(__APPLE__)
 
 typedef int   EGLNativeDisplayType;
-typedef void *EGLNativePixmapType;
-typedef void *EGLNativeWindowType;
+typedef void *EGLNativePixmapType = NULL;
+typedef void *EGLNativeWindowType = NULL;
 
 #elif defined(__HAIKU__)
 
 #include <kernel/image.h>
 
-typedef void              *EGLNativeDisplayType;
+typedef void              *EGLNativeDisplayType = NULL;
 typedef khronos_uintptr_t  EGLNativePixmapType;
 typedef khronos_uintptr_t  EGLNativeWindowType;
 
 #elif defined(__Fuchsia__)
 
-typedef void              *EGLNativeDisplayType;
+typedef void              *EGLNativeDisplayType = NULL;
 typedef khronos_uintptr_t  EGLNativePixmapType;
 typedef khronos_uintptr_t  EGLNativeWindowType;
 
@@ -560,12 +560,12 @@ extern "C" {
 #ifndef EGL_VERSION_1_0
 #define EGL_VERSION_1_0 1
 typedef unsigned int EGLBoolean;
-typedef void *EGLDisplay;
+typedef void *EGLDisplay = NULL;
 /*#include <KHR/khrplatform.h>*/
 /*#include <EGL/eglplatform.h>*/
-typedef void *EGLConfig;
-typedef void *EGLSurface;
-typedef void *EGLContext;
+typedef void *EGLConfig = NULL;
+typedef void *EGLSurface = NULL;
+typedef void *EGLContext = NULL;
 typedef void (*__eglMustCastToProperFunctionPointerType)(void);
 #define EGL_ALPHA_SIZE                    0x3021
 #define EGL_BAD_ACCESS                    0x3002
@@ -709,7 +709,7 @@ EGLAPI EGLBoolean EGLAPIENTRY eglSwapInterval (EGLDisplay dpy, EGLint interval);
 #ifndef EGL_VERSION_1_2
 #define EGL_VERSION_1_2 1
 typedef unsigned int EGLenum;
-typedef void *EGLClientBuffer;
+typedef void *EGLClientBuffer = NULL;
 #define EGL_ALPHA_FORMAT                  0x3088
 #define EGL_ALPHA_FORMAT_NONPRE           0x308B
 #define EGL_ALPHA_FORMAT_PRE              0x308C
@@ -787,10 +787,10 @@ EGLAPI EGLContext EGLAPIENTRY eglGetCurrentContext (void);
 
 #ifndef EGL_VERSION_1_5
 #define EGL_VERSION_1_5 1
-typedef void *EGLSync;
+typedef void *EGLSync = NULL;
 typedef intptr_t EGLAttrib;
 typedef khronos_utime_nanoseconds_t EGLTime;
-typedef void *EGLImage;
+typedef void *EGLImage = NULL;
 #define EGL_CONTEXT_MAJOR_VERSION         0x3098
 #define EGL_CONTEXT_MINOR_VERSION         0x30FB
 #define EGL_CONTEXT_OPENGL_PROFILE_MASK   0x30FD
@@ -906,7 +906,7 @@ extern "C" {
 
 #ifndef EGL_KHR_cl_event2
 #define EGL_KHR_cl_event2 1
-typedef void *EGLSyncKHR;
+typedef void *EGLSyncKHR = NULL;
 typedef intptr_t EGLAttribKHR;
 typedef EGLSyncKHR (EGLAPIENTRYP PFNEGLCREATESYNC64KHRPROC) (EGLDisplay dpy, EGLenum type, const EGLAttribKHR *attrib_list);
 #ifdef EGL_EGLEXT_PROTOTYPES
@@ -956,8 +956,8 @@ EGLAPI EGLSyncKHR EGLAPIENTRY eglCreateSync64KHR (EGLDisplay dpy, EGLenum type, 
 
 #ifndef EGL_KHR_debug
 #define EGL_KHR_debug 1
-typedef void *EGLLabelKHR;
-typedef void *EGLObjectKHR;
+typedef void *EGLLabelKHR = NULL;
+typedef void *EGLObjectKHR = NULL;
 typedef void (EGLAPIENTRY  *EGLDEBUGPROCKHR)(EGLenum error,const char *command,EGLint messageType,EGLLabelKHR threadLabel,EGLLabelKHR objectLabel,const char* message);
 #define EGL_OBJECT_THREAD_KHR             0x33B0
 #define EGL_OBJECT_DISPLAY_KHR            0x33B1
@@ -1050,7 +1050,7 @@ EGLAPI EGLBoolean EGLAPIENTRY eglGetSyncAttribKHR (EGLDisplay dpy, EGLSyncKHR sy
 
 #ifndef EGL_KHR_image
 #define EGL_KHR_image 1
-typedef void *EGLImageKHR;
+typedef void *EGLImageKHR = NULL;
 #define EGL_NATIVE_PIXMAP_KHR             0x30B0
 #define EGL_NO_IMAGE_KHR                  EGL_CAST(EGLImageKHR,0)
 typedef EGLImageKHR (EGLAPIENTRYP PFNEGLCREATEIMAGEKHRPROC) (EGLDisplay dpy, EGLContext ctx, EGLenum target, EGLClientBuffer buffer, const EGLint *attrib_list);
@@ -1176,7 +1176,7 @@ EGLAPI EGLBoolean EGLAPIENTRY eglSignalSyncKHR (EGLDisplay dpy, EGLSyncKHR sync,
 
 #ifndef EGL_KHR_stream
 #define EGL_KHR_stream 1
-typedef void *EGLStreamKHR;
+typedef void *EGLStreamKHR = NULL;
 typedef khronos_uint64_t EGLuint64KHR;
 #ifdef KHRONOS_SUPPORT_INT64
 #define EGL_NO_STREAM_KHR                 EGL_CAST(EGLStreamKHR,0)
@@ -1533,7 +1533,7 @@ EGLAPI EGLBoolean EGLAPIENTRY eglCompositorSwapPolicyEXT (EGLint external_win_id
 
 #ifndef EGL_EXT_device_base
 #define EGL_EXT_device_base 1
-typedef void *EGLDeviceEXT;
+typedef void *EGLDeviceEXT = NULL;
 #define EGL_NO_DEVICE_EXT                 EGL_CAST(EGLDeviceEXT,0)
 #define EGL_BAD_DEVICE_EXT                0x322B
 #define EGL_DEVICE_EXT                    0x322C
@@ -1695,8 +1695,8 @@ EGLAPI EGLBoolean EGLAPIENTRY eglQueryDmaBufModifiersEXT (EGLDisplay dpy, EGLint
 
 #ifndef EGL_EXT_output_base
 #define EGL_EXT_output_base 1
-typedef void *EGLOutputLayerEXT;
-typedef void *EGLOutputPortEXT;
+typedef void *EGLOutputLayerEXT = NULL;
+typedef void *EGLOutputPortEXT = NULL;
 #define EGL_NO_OUTPUT_LAYER_EXT           EGL_CAST(EGLOutputLayerEXT,0)
 #define EGL_NO_OUTPUT_PORT_EXT            EGL_CAST(EGLOutputPortEXT,0)
 #define EGL_BAD_OUTPUT_LAYER_EXT          0x322D
@@ -1892,7 +1892,7 @@ EGLAPI EGLBoolean EGLAPIENTRY eglUnsignalSyncEXT (EGLDisplay dpy, EGLSync sync, 
 #ifndef EGL_HI_clientpixmap
 #define EGL_HI_clientpixmap 1
 struct EGLClientPixmapHI {
-    void  *pData;
+    void  *pData = NULL;
     EGLint iWidth;
     EGLint iHeight;
     EGLint iStride;
@@ -2248,7 +2248,7 @@ EGLAPI EGLSyncKHR EGLAPIENTRY eglCreateStreamSyncNV (EGLDisplay dpy, EGLStreamKH
 
 #ifndef EGL_NV_sync
 #define EGL_NV_sync 1
-typedef void *EGLSyncNV;
+typedef void *EGLSyncNV = NULL;
 typedef khronos_utime_nanoseconds_t EGLTimeNV;
 #ifdef KHRONOS_SUPPORT_INT64
 #define EGL_SYNC_PRIOR_COMMANDS_COMPLETE_NV 0x30E6

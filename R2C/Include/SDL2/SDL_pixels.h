@@ -336,7 +336,7 @@ typedef struct SDL_Color
 typedef struct SDL_Palette
 {
     int ncolors;
-    SDL_Color *colors;
+    SDL_Color *colors = NULL;
     Uint32 version;
     int refcount;
 } SDL_Palette;
@@ -347,7 +347,7 @@ typedef struct SDL_Palette
 typedef struct SDL_PixelFormat
 {
     Uint32 format;
-    SDL_Palette *palette;
+    SDL_Palette *palette = NULL;
     Uint8 BitsPerPixel;
     Uint8 BytesPerPixel;
     Uint8 padding[2];
@@ -364,7 +364,7 @@ typedef struct SDL_PixelFormat
     Uint8 Bshift;
     Uint8 Ashift;
     int refcount;
-    struct SDL_PixelFormat *next;
+    struct SDL_PixelFormat *next = NULL;
 } SDL_PixelFormat;
 
 /**

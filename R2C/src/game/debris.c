@@ -16,7 +16,7 @@ extern Stage stage;
 
 void initDebris(int x, int y, AtlasImage *texture)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	e = spawnEntity();
 	e->x = x;

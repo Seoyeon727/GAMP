@@ -1679,7 +1679,7 @@ GLAPI void APIENTRY glUniformBlockBinding (GLuint program, GLuint uniformBlockIn
 
 #ifndef GL_VERSION_3_2
 #define GL_VERSION_3_2 1
-typedef struct __GLsync *GLsync;
+typedef struct __GLsync *GLsync = NULL;
 typedef khronos_uint64_t GLuint64;
 typedef khronos_int64_t GLint64;
 #define GL_CONTEXT_CORE_PROFILE_BIT       0x00000001
@@ -4368,7 +4368,7 @@ GLAPI void APIENTRY glMinSampleShadingARB (GLfloat value);
 #ifndef GL_ARB_shader_objects
 #define GL_ARB_shader_objects 1
 #ifdef __APPLE__
-typedef void *GLhandleARB;
+typedef void *GLhandleARB = NULL;
 #else
 typedef unsigned int GLhandleARB;
 #endif
@@ -6774,7 +6774,7 @@ GLAPI void APIENTRY glVertexBlendEnvfATI (GLenum pname, GLfloat param);
 
 #ifndef GL_EXT_EGL_image_storage
 #define GL_EXT_EGL_image_storage 1
-typedef void *GLeglImageOES;
+typedef void *GLeglImageOES = NULL;
 typedef void (APIENTRYP PFNGLEGLIMAGETARGETTEXSTORAGEEXTPROC) (GLenum target, GLeglImageOES image, const GLint* attrib_list);
 typedef void (APIENTRYP PFNGLEGLIMAGETARGETTEXTURESTORAGEEXTPROC) (GLuint texture, GLeglImageOES image, const GLint* attrib_list);
 #ifdef GL_GLEXT_PROTOTYPES
@@ -7640,7 +7640,7 @@ GLAPI void APIENTRY glDrawRangeElementsEXT (GLenum mode, GLuint start, GLuint en
 
 #ifndef GL_EXT_external_buffer
 #define GL_EXT_external_buffer 1
-typedef void *GLeglClientBufferEXT;
+typedef void *GLeglClientBufferEXT = NULL;
 typedef void (APIENTRYP PFNGLBUFFERSTORAGEEXTERNALEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLeglClientBufferEXT clientBuffer, GLbitfield flags);
 typedef void (APIENTRYP PFNGLNAMEDBUFFERSTORAGEEXTERNALEXTPROC) (GLuint buffer, GLintptr offset, GLsizeiptr size, GLeglClientBufferEXT clientBuffer, GLbitfield flags);
 #ifdef GL_GLEXT_PROTOTYPES

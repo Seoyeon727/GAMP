@@ -96,16 +96,16 @@ typedef struct SDL_RWops
 #if defined(__ANDROID__)
         struct
         {
-            void *asset;
+            void *asset = NULL;
         } androidio;
 #elif defined(__WIN32__) || defined(__GDK__)
         struct
         {
             SDL_bool append;
-            void *h;
+            void *h = NULL;
             struct
             {
-                void *data;
+                void *data = NULL;
                 size_t size;
                 size_t left;
             } buffer;
@@ -116,19 +116,19 @@ typedef struct SDL_RWops
         struct
         {
             SDL_bool autoclose;
-            FILE *fp;
+            FILE *fp = NULL;
         } stdio;
 #endif
         struct
         {
-            Uint8 *base;
-            Uint8 *here;
-            Uint8 *stop;
+            Uint8 *base = NULL;
+            Uint8 *here = NULL;
+            Uint8 *stop = NULL;
         } mem;
         struct
         {
-            void *data1;
-            void *data2;
+            void *data1 = NULL;
+            void *data2 = NULL;
         } unknown;
     } hidden;
 

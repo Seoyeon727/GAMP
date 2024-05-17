@@ -120,11 +120,11 @@ typedef struct SDL_AssertData
 {
     int always_ignore;
     unsigned int trigger_count;
-    const char *condition;
-    const char *filename;
+    const char *condition = NULL;
+    const char *filename = NULL;
     int linenum;
-    const char *function;
-    const struct SDL_AssertData *next;
+    const char *function = NULL;
+    const struct SDL_AssertData *next = NULL;
 } SDL_AssertData;
 
 /* Never call this directly. Use the SDL_assert* macros. */

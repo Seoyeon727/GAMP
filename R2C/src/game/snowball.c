@@ -23,8 +23,8 @@ extern Stage stage;
 
 void initSnowball(int x, int y)
 {
-	Entity   *e;
-	Snowball *s;
+	Entity   *e = NULL;
+	Snowball *s = NULL;
 
 	if (texture == NULL)
 	{
@@ -50,7 +50,7 @@ void initSnowball(int x, int y)
 
 static void tick(Entity *self)
 {
-	Snowball *s;
+	Snowball *s = NULL;
 
 	s = (Snowball *)self->data;
 

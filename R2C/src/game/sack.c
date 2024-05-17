@@ -16,15 +16,15 @@ static void draw(Entity *self);
 static void touch(Entity *self, Entity *other);
 
 static AtlasImage *giftSackTexture = NULL;
-static AtlasImage *coalSackTexture;
+static AtlasImage *coalSackTexture = NULL;
 
 extern App   app;
 extern Stage stage;
 
 void initSack(int type)
 {
-	Entity *e;
-	Sack   *s;
+	Entity *e = NULL;
+	Sack   *s = NULL;
 	int     i;
 
 	if (giftSackTexture == NULL)
@@ -67,7 +67,7 @@ void initSack(int type)
 
 static void tick(Entity *self)
 {
-	Sack *s;
+	Sack *s = NULL;
 
 	s = (Sack *)self->data;
 

@@ -593,8 +593,8 @@ extern DECLSPEC void SDLCALL SDL_OnApplicationDidChangeStatusBarOrientation(void
 
 /* Functions used only by GDK */
 #if defined(__GDK__)
-typedef struct XTaskQueueObject *XTaskQueueHandle;
-typedef struct XUser *XUserHandle;
+typedef struct XTaskQueueObject *XTaskQueueHandle = NULL;
+typedef struct XUser *XUserHandle = NULL;
 
 /**
  * Gets a reference to the global async task queue handle for GDK,

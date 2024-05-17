@@ -23,7 +23,7 @@ static void die(Entity *self);
 static void loadTextures(void);
 
 static AtlasImage *sleighTexture = NULL;
-static AtlasImage *explosionTexture;
+static AtlasImage *explosionTexture = NULL;
 static AtlasImage *sleighPart1Texture, *sleighPart2Texture, *santaTexture;
 static AtlasImage *giftTextures[NUM_GIFT_TEXTURES], *coalTextures[NUM_COAL_TEXTURES];
 
@@ -32,8 +32,8 @@ extern Stage stage;
 
 void initPlayer(void)
 {
-	Entity *e;
-	Santa  *s;
+	Entity *e = NULL;
+	Santa  *s = NULL;
 
 	if (sleighTexture == NULL)
 	{
@@ -60,7 +60,7 @@ void initPlayer(void)
 
 static void tick(Entity *self)
 {
-	Santa *s;
+	Santa *s = NULL;
 
 	move(self);
 
@@ -154,7 +154,7 @@ static void dropGift(void)
 
 static void draw(Entity *self)
 {
-	Santa *s;
+	Santa *s = NULL;
 	int    x, y;
 
 	s = (Santa *)stage.player->data;
@@ -199,7 +199,7 @@ static void die(Entity *self)
 
 void killPlayer(int x, int y)
 {
-	Santa *s;
+	Santa *s = NULL;
 
 	s = (Santa *)stage.player->data;
 

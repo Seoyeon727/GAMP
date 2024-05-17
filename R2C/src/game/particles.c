@@ -54,7 +54,7 @@ void doParticles(void)
 
 void drawParticles(void)
 {
-	Particle *p;
+	Particle *p = NULL;
 
 	for (p = head.next; p != NULL; p = p->next)
 	{
@@ -64,7 +64,7 @@ void drawParticles(void)
 
 void addParticle(int x, int y, int r, int g, int b)
 {
-	Particle *p;
+	Particle *p = NULL;
 
 	p = malloc(sizeof(Particle));
 	memset(p, 0, sizeof(Particle));
@@ -84,7 +84,7 @@ void addParticle(int x, int y, int r, int g, int b)
 
 void clearParticles(void)
 {
-	Particle *p;
+	Particle *p = NULL;
 
 	while (head.next)
 	{

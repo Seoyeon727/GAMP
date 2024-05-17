@@ -60,10 +60,10 @@ typedef struct
     Uint32 verbose;
 
     /* Video info */
-    const char *videodriver;
+    const char *videodriver = NULL;
     int display;
-    const char *window_title;
-    const char *window_icon;
+    const char *window_title = NULL;
+    const char *window_icon = NULL;
     Uint32 window_flags;
     SDL_bool flash_on_focus_loss;
     int window_x;
@@ -83,14 +83,14 @@ typedef struct
     SDL_Window **windows;
 
     /* Renderer info */
-    const char *renderdriver;
+    const char *renderdriver = NULL;
     Uint32 render_flags;
     SDL_bool skip_renderer;
     SDL_Renderer **renderers;
     SDL_Texture **targets;
 
     /* Audio info */
-    const char *audiodriver;
+    const char *audiodriver = NULL;
     SDL_AudioSpec audiospec;
 
     /* GL settings */

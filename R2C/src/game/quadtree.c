@@ -24,7 +24,7 @@ extern Stage stage;
 
 void initQuadtree(Quadtree *root)
 {
-	Quadtree *node;
+	Quadtree *node = NULL;
 	int       i, w, h;
 
 	if (root->depth == 0)
