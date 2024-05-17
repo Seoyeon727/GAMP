@@ -33,7 +33,7 @@
 
 #include "cJSON.h"
 
-static const char *ep;
+static const char *ep = NULL;
 
 const char *cJSON_GetErrorPtr(void)
 {
@@ -55,7 +55,7 @@ static void (*cJSON_free)(void *ptr) = free;
 static char *cJSON_strdup(const char *str)
 {
 	size_t len;
-	char  *copy;
+	char  *copy = NULL;
 
 	len = strlen(str) + 1;
 	if (!(copy = (char *)cJSON_malloc(len))) return 0;
@@ -87,7 +87,7 @@ static cJSON *cJSON_New_Item(void)
 /* Delete a cJSON structure. */
 void cJSON_Delete(cJSON *c)
 {
-	cJSON *next;
+	cJSON *next = NULL;
 	while (c)
 	{
 		next = c->next;
@@ -147,14 +147,14 @@ static int pow2gt(int x)
 
 typedef struct
 {
-	char *buffer;
+	char *buffer = NULL;
 	int   length;
 	int   offset;
 } printbuffer;
 
 static char *ensure(printbuffer *p, int needed)
 {
-	char *newbuffer;
+	char *newbuffer = NULL;
 	int   newsize;
 	if (!p || !p->buffer) return 0;
 	needed += p->offset;
@@ -177,7 +177,7 @@ static char *ensure(printbuffer *p, int needed)
 
 static int update(printbuffer *p)
 {
-	char *str;
+	char *str = NULL;
 	if (!p || !p->buffer) return 0;
 	str = p->buffer + p->offset;
 	return p->offset + strlen(str);
@@ -272,8 +272,8 @@ static const unsigned char firstByteMark[7] = {0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF
 static const char         *parse_string(cJSON *item, const char *str)
 {
 	const char *ptr = str + 1;
-	char       *ptr2;
-	char       *out;
+	char       *ptr2 = NULL;
+	char       *out = NULL;
 	int         len = 0;
 	unsigned    uc, uc2;
 	if (*str != '\"')
@@ -371,7 +371,7 @@ static const char         *parse_string(cJSON *item, const char *str)
 /* Render the cstring provided to an escaped version that can be printed. */
 static char *print_string_ptr(const char *str, printbuffer *p)
 {
-	const char   *ptr;
+	const char   *ptr = NULL;
 	char		 *ptr2, *out;
 	int           len = 0, flag = 0;
 	unsigned char token;
@@ -658,7 +658,7 @@ static char *print_value(cJSON *item, int depth, int fmt, printbuffer *p)
 /* Build an array from input text. */
 static const char *parse_array(cJSON *item, const char *value)
 {
-	cJSON *child;
+	cJSON *child = NULL;
 	if (*value != '[')
 	{
 		ep = value;
@@ -676,7 +676,7 @@ static const char *parse_array(cJSON *item, const char *value)
 
 	while (*value == ',')
 	{
-		cJSON *new_item;
+		cJSON *new_item = NULL;
 		if (!(new_item = cJSON_New_Item())) return 0; /* memory fail */
 		child->next = new_item;
 		new_item->prev = child;
@@ -804,7 +804,7 @@ static char *print_array(cJSON *item, int depth, int fmt, printbuffer *p)
 /* Build an object from the text. */
 static const char *parse_object(cJSON *item, const char *value)
 {
-	cJSON *child;
+	cJSON *child = NULL;
 	if (*value != '{')
 	{
 		ep = value;
@@ -831,7 +831,7 @@ static const char *parse_object(cJSON *item, const char *value)
 
 	while (*value == ',')
 	{
-		cJSON *new_item;
+		cJSON *new_item = NULL;
 		if (!(new_item = cJSON_New_Item())) return 0; /* memory fail */
 		child->next = new_item;
 		new_item->prev = child;

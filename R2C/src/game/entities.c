@@ -86,7 +86,7 @@ static void doCollisions(Entity *e)
 
 int canAddEntity(int x, int y, int w, int h)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	for (e = stage.entityHead.next; e != NULL; e = e->next)
 	{
@@ -101,7 +101,7 @@ int canAddEntity(int x, int y, int w, int h)
 
 void drawEntities(void)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	for (e = stage.entityHead.next; e != NULL; e = e->next)
 	{
@@ -111,7 +111,7 @@ void drawEntities(void)
 
 Entity *spawnEntity(void)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	e = malloc(sizeof(Entity));
 	memset(e, 0, sizeof(Entity));
@@ -124,7 +124,7 @@ Entity *spawnEntity(void)
 
 void clearEntities(void)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	while (stage.entityHead.next)
 	{

@@ -9,7 +9,7 @@
 extern App app;
 
 static Texture  textureHead;
-static Texture *textureTail;
+static Texture *textureTail = NULL;
 
 void initTextures(void)
 {
@@ -20,7 +20,7 @@ void initTextures(void)
 
 static SDL_Texture *getTexture(char *name)
 {
-	Texture *t;
+	Texture *t = NULL;
 
 	for (t = textureHead.next; t != NULL; t = t->next)
 	{
@@ -35,7 +35,7 @@ static SDL_Texture *getTexture(char *name)
 
 static void addTextureToCache(char *name, SDL_Texture *sdlTexture)
 {
-	Texture *texture;
+	Texture *texture = NULL;
 
 	texture = malloc(sizeof(Texture));
 	memset(texture, 0, sizeof(Texture));
@@ -48,7 +48,7 @@ static void addTextureToCache(char *name, SDL_Texture *sdlTexture)
 
 SDL_Texture *toTexture(SDL_Surface *surface, int destroySurface)
 {
-	SDL_Texture *texture;
+	SDL_Texture *texture = NULL;
 
 	texture = SDL_CreateTextureFromSurface(app.renderer, surface);
 
@@ -62,7 +62,7 @@ SDL_Texture *toTexture(SDL_Surface *surface, int destroySurface)
 
 SDL_Texture *loadTexture(char *filename)
 {
-	SDL_Texture *texture;
+	SDL_Texture *texture = NULL;
 
 	texture = getTexture(filename);
 

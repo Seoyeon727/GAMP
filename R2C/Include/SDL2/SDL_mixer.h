@@ -229,7 +229,7 @@ extern DECLSPEC void SDLCALL Mix_Quit(void);
  */
 typedef struct Mix_Chunk {
     int allocated;
-    Uint8 *abuf;
+    Uint8 *abuf = NULL;
     Uint32 alen;
     Uint8 volume;       /* Per-sample volume, 0-128 */
 } Mix_Chunk;

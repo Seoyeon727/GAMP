@@ -83,20 +83,20 @@ typedef struct SDL_hid_device_ SDL_hid_device; /**< opaque hidapi structure */
 typedef struct SDL_hid_device_info
 {
     /** Platform-specific device path */
-    char *path;
+    char *path = NULL;
     /** Device Vendor ID */
     unsigned short vendor_id;
     /** Device Product ID */
     unsigned short product_id;
     /** Serial Number */
-    wchar_t *serial_number;
+    wchar_t *serial_number = NULL;
     /** Device Release Number in binary-coded decimal,
         also known as Device Version Number */
     unsigned short release_number;
     /** Manufacturer String */
-    wchar_t *manufacturer_string;
+    wchar_t *manufacturer_string = NULL;
     /** Product string */
-    wchar_t *product_string;
+    wchar_t *product_string = NULL;
     /** Usage Page for this Device/Interface
         (Windows/Mac only). */
     unsigned short usage_page;
@@ -118,7 +118,7 @@ typedef struct SDL_hid_device_info
     int interface_protocol;
 
     /** Pointer to the next device */
-    struct SDL_hid_device_info *next;
+    struct SDL_hid_device_info *next = NULL;
 } SDL_hid_device_info;
 
 

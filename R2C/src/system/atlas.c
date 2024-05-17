@@ -16,7 +16,7 @@ extern App app;
 static void loadAtlasData(void);
 
 static AtlasImage   atlases[NUM_ATLAS_BUCKETS];
-static SDL_Texture *atlasTexture;
+static SDL_Texture *atlasTexture = NULL;
 
 void initAtlas(void)
 {
@@ -29,7 +29,7 @@ void initAtlas(void)
 
 AtlasImage *getAtlasImage(char *filename, int required)
 {
-	AtlasImage   *a;
+	AtlasImage   *a = NULL;
 	unsigned long i;
 
 	i = hashcode(filename) % NUM_ATLAS_BUCKETS;

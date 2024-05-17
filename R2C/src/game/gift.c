@@ -26,7 +26,7 @@ extern Stage stage;
 
 void initGift(int type)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	if (giftTextures[0] == NULL)
 	{

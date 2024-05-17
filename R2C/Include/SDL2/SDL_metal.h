@@ -41,7 +41,7 @@ extern "C" {
  *
  *  \note This can be cast directly to an NSView or UIView.
  */
-typedef void *SDL_MetalView;
+typedef void *SDL_MetalView = NULL;
 
 /**
  *  \name Metal support functions

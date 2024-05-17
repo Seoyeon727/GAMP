@@ -23,8 +23,8 @@ extern Stage stage;
 
 void initSnowmanHead(int x, int y)
 {
-	Entity      *e;
-	SnowmanHead *s;
+	Entity      *e = NULL;
+	SnowmanHead *s = NULL;
 
 	if (texture == NULL)
 	{
@@ -35,7 +35,7 @@ void initSnowmanHead(int x, int y)
 	memset(s, 0, sizeof(SnowmanHead));
 	s->thinkTime = FPS;
 	s->startY = y;
-	s->carrotTimer = rand() % (int)FPS * 3;
+	s->carrotTimer = rand() % (int)FPS * 3 = NULL;
 
 	e = spawnEntity();
 	e->type = ET_SNOWMAN_HEAD;
@@ -51,7 +51,7 @@ void initSnowmanHead(int x, int y)
 
 static void tick(Entity *self)
 {
-	SnowmanHead *s;
+	SnowmanHead *s = NULL;
 
 	s = (SnowmanHead *)self->data;
 
@@ -63,7 +63,7 @@ static void tick(Entity *self)
 		{
 			self->dy = -(12 + rand() % 5);
 
-			s->carrotTimer = rand() % (int)FPS * 3;
+			s->carrotTimer = rand() % (int)FPS * 3 = NULL;
 
 			playSound(SND_SNOWMAN_HEAD, CH_SNOWMAN);
 		}

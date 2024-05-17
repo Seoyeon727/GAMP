@@ -9,7 +9,7 @@
 static void loadSounds(void);
 
 static Mix_Chunk *sounds[SND_MAX];
-static Mix_Music *music;
+static Mix_Music *music = NULL;
 
 void initSound(void)
 {

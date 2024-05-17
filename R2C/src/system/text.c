@@ -22,9 +22,9 @@ static int  drawTextWrapped(char *text, int x, int y, int r, int g, int b, int a
 static void drawTextLine(char *text, int x, int y, int r, int g, int b, int align);
 
 static SDL_Color    white = {255, 255, 255, 255};
-static TTF_Font    *font;
+static TTF_Font    *font = NULL;
 static SDL_Rect     glyphs[NUM_GLYPHS];
-static SDL_Texture *fontTexture;
+static SDL_Texture *fontTexture = NULL;
 
 void initFonts(void)
 {
@@ -39,7 +39,7 @@ static void initFont(char *filename)
 	SDL_Rect     dest;
 	int          i;
 	char         c[2];
-	SDL_Rect    *g;
+	SDL_Rect    *g = NULL;
 
 	memset(&glyphs, 0, sizeof(SDL_Rect) * NUM_GLYPHS);
 
@@ -92,7 +92,7 @@ static void initFont(char *filename)
 
 SDL_Texture *getTextTexture(char *text, int type)
 {
-	SDL_Surface *surface;
+	SDL_Surface *surface = NULL;
 
 	surface = TTF_RenderUTF8_Blended(font, text, white);
 
@@ -249,7 +249,7 @@ static void drawTextLine(char *text, int x, int y, int r, int g, int b, int alig
 void calcTextDimensions(char *text, int *w, int *h)
 {
 	int       i, character;
-	SDL_Rect *g;
+	SDL_Rect *g = NULL;
 
 	*w = *h = 0;
 

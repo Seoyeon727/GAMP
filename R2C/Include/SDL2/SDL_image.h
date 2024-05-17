@@ -2046,7 +2046,7 @@ typedef struct
 	int w, h;
 	int count;
 	SDL_Surface **frames;
-	int *delays;
+	int *delays = NULL;
 } IMG_Animation;
 
 /**

@@ -236,7 +236,7 @@ GL_APICALL void GL_APIENTRY glGetnUniformuivKHR (GLuint program, GLint location,
 
 #ifndef GL_OES_EGL_image
 #define GL_OES_EGL_image 1
-typedef void *GLeglImageOES;
+typedef void *GLeglImageOES = NULL;
 typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) (GLenum target, GLeglImageOES image);
 typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLeglImageOES image);
 #ifdef GL_GLEXT_PROTOTYPES
@@ -1406,7 +1406,7 @@ GL_APICALL void GL_APIENTRY glDrawTransformFeedbackInstancedEXT (GLenum mode, GL
 
 #ifndef GL_EXT_external_buffer
 #define GL_EXT_external_buffer 1
-typedef void *GLeglClientBufferEXT;
+typedef void *GLeglClientBufferEXT = NULL;
 typedef void (GL_APIENTRYP PFNGLBUFFERSTORAGEEXTERNALEXTPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLeglClientBufferEXT clientBuffer, GLbitfield flags);
 typedef void (GL_APIENTRYP PFNGLNAMEDBUFFERSTORAGEEXTERNALEXTPROC) (GLuint buffer, GLintptr offset, GLsizeiptr size, GLeglClientBufferEXT clientBuffer, GLbitfield flags);
 #ifdef GL_GLEXT_PROTOTYPES

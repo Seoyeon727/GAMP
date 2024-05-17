@@ -15,7 +15,7 @@ extern App app;
 
 void initSnow(void)
 {
-	Snow *s;
+	Snow *s = NULL;
 	int   i;
 
 	for (i = 0; i < MAX_SNOW; i++)
@@ -34,7 +34,7 @@ void initSnow(void)
 
 void doSnow(void)
 {
-	Snow *s;
+	Snow *s = NULL;
 	int   i;
 
 	for (i = 0; i < MAX_SNOW; i++)
@@ -73,7 +73,7 @@ void doSnow(void)
 
 void drawSnow(void)
 {
-	Snow *s;
+	Snow *s = NULL;
 	int   i;
 
 	for (i = 0; i < MAX_SNOW; i++)

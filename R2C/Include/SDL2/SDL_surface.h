@@ -72,25 +72,25 @@ typedef struct SDL_BlitMap SDL_BlitMap;  /* this is an opaque type. */
 typedef struct SDL_Surface
 {
     Uint32 flags;               /**< Read-only */
-    SDL_PixelFormat *format;    /**< Read-only */
+    SDL_PixelFormat *format = NULL;    /**< Read-only */
     int w, h;                   /**< Read-only */
     int pitch;                  /**< Read-only */
-    void *pixels;               /**< Read-write */
+    void *pixels = NULL;               /**< Read-write */
 
     /** Application data associated with the surface */
-    void *userdata;             /**< Read-write */
+    void *userdata = NULL;             /**< Read-write */
 
     /** information needed for surfaces requiring locks */
     int locked;                 /**< Read-only */
 
     /** list of BlitMap that hold a reference to this surface */
-    void *list_blitmap;         /**< Private */
+    void *list_blitmap = NULL;         /**< Private */
 
     /** clipping information */
     SDL_Rect clip_rect;         /**< Read-only */
 
     /** info for fast blit mapping to other surfaces */
-    SDL_BlitMap *map;           /**< Private */
+    SDL_BlitMap *map = NULL;           /**< Private */
 
     /** Reference count -- used when freeing surface */
     int refcount;               /**< Read-mostly */

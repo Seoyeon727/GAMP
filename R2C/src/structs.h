@@ -11,17 +11,17 @@ typedef struct Particle   Particle;
 struct Texture
 {
 	char         name[MAX_FILENAME_LENGTH];
-	SDL_Texture *texture;
-	Texture     *next;
+	SDL_Texture *texture = NULL;
+	Texture     *next = NULL;
 };
 
 struct AtlasImage
 {
 	char         filename[MAX_FILENAME_LENGTH];
-	SDL_Texture *texture;
+	SDL_Texture *texture = NULL;
 	SDL_Rect     rect;
 	int          rotated;
-	AtlasImage  *next;
+	AtlasImage  *next = NULL;
 };
 
 struct Entity
@@ -29,14 +29,14 @@ struct Entity
 	int         type;
 	double      x, y;
 	double      dx, dy;
-	AtlasImage *texture;
+	AtlasImage *texture = NULL;
 	int         dead;
 	void(*data);
 	void (*tick)(Entity *self);
 	void (*draw)(Entity *self);
 	void (*touch)(Entity *self, Entity *other);
 	void (*die)(Entity *self);
-	Entity *next;
+	Entity *next = NULL;
 };
 
 typedef struct
@@ -59,7 +59,7 @@ typedef struct
 {
 	double   successLights;
 	int      naughty;
-	Chimney *chimney;
+	Chimney *chimney = NULL;
 } House;
 
 typedef struct
@@ -96,14 +96,14 @@ struct Particle
 	double    dx, dy;
 	double    life;
 	SDL_Color color;
-	Particle *next;
+	Particle *next = NULL;
 };
 
 typedef struct
 {
 	double      x, y;
 	double      speed;
-	AtlasImage *texture;
+	AtlasImage *texture = NULL;
 } Tree;
 
 typedef struct
@@ -140,7 +140,7 @@ typedef struct
 	int      state;
 	Quadtree quadtree;
 	Entity   entityHead, *entityTail;
-	Entity  *player;
+	Entity  *player = NULL;
 	double   pauseTimer;
 } Stage;
 
@@ -154,7 +154,7 @@ typedef struct
 typedef struct
 {
 	Highscore  highscores[NUM_HIGHSCORES];
-	Highscore *latestHighscore;
+	Highscore *latestHighscore = NULL;
 } Game;
 
 typedef struct
@@ -165,8 +165,8 @@ typedef struct
 		void (*draw)(void);
 	} delegate;
 	double        deltaTime;
-	SDL_Renderer *renderer;
-	SDL_Window   *window;
+	SDL_Renderer *renderer = NULL;
+	SDL_Window   *window = NULL;
 	int           keyboard[MAX_KEYBOARD_KEYS];
 	double        fontScale;
 } App;

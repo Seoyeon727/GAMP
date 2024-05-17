@@ -22,7 +22,7 @@ extern Stage stage;
 
 void initCarrot(int x, int y)
 {
-	Entity *e;
+	Entity *e = NULL;
 
 	if (texture == NULL)
 	{

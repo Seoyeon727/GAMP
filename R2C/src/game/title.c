@@ -17,7 +17,7 @@
 static void logic(void);
 static void draw(void);
 
-static SDL_Texture *titleTexture;
+static SDL_Texture *titleTexture = NULL;
 static double       showTimer;
 static int          showScores;
 

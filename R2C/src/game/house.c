@@ -20,8 +20,8 @@ static void touch(Entity *self, Entity *other);
 static void loadTextures(void);
 
 static AtlasImage *houseTextures[NUM_HOUSE_TEXTURES] = {NULL};
-static AtlasImage *houseLights;
-static AtlasImage *dullSuccessLightTexture;
+static AtlasImage *houseLights = NULL;
+static AtlasImage *dullSuccessLightTexture = NULL;
 static AtlasImage *successLightTextures[NUM_SUCCESS_LIGHTS_TEXTURES] = {NULL};
 
 extern App   app;
@@ -30,7 +30,7 @@ extern Stage stage;
 void initHouse(void)
 {
 	Entity *e, *chimney;
-	House  *h;
+	House  *h = NULL;
 	int     x, y;
 
 	if (houseTextures[0] == NULL)
@@ -73,7 +73,7 @@ void initHouse(void)
 
 static void tick(Entity *self)
 {
-	House *h;
+	House *h = NULL;
 
 	h = (House *)self->data;
 
@@ -94,7 +94,7 @@ static void tick(Entity *self)
 
 static void draw(Entity *self)
 {
-	House *h;
+	House *h = NULL;
 
 	h = (House *)self->data;
 

@@ -30,9 +30,9 @@ int collision(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2)
 
 char *readFile(char *filename)
 {
-	char *buffer;
+	char *buffer = NULL;
 	long  length;
-	FILE *file;
+	FILE *file = NULL;
 
 	SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Loading %s ...", filename);
 

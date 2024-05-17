@@ -22,15 +22,15 @@ static void die(Entity *self);
 static void loadTextures(void);
 
 static AtlasImage *chimneyTextures[NUM_CHIMNEY_TEXTURES] = {NULL};
-static AtlasImage *cleanChimneyTexture;
+static AtlasImage *cleanChimneyTexture = NULL;
 
 extern App   app;
 extern Stage stage;
 
 Entity *initChimney(int naughty)
 {
-	Entity  *e;
-	Chimney *c;
+	Entity  *e = NULL;
+	Chimney *c = NULL;
 
 	if (chimneyTextures[0] == NULL)
 	{
@@ -56,7 +56,7 @@ Entity *initChimney(int naughty)
 
 static void tick(Entity *self)
 {
-	Chimney *c;
+	Chimney *c = NULL;
 
 	c = (Chimney *)self->data;
 
@@ -71,7 +71,7 @@ static void tick(Entity *self)
 
 static void draw(Entity *self)
 {
-	Chimney *c;
+	Chimney *c = NULL;
 	char     pointsText[5];
 	int      x, g, b;
 
@@ -100,7 +100,7 @@ static void draw(Entity *self)
 
 static void touch(Entity *self, Entity *other)
 {
-	Chimney *c;
+	Chimney *c = NULL;
 	int      i, score;
 
 	if (other->type == ET_GIFT || other->type == ET_COAL)
@@ -141,7 +141,7 @@ static void touch(Entity *self, Entity *other)
 		c->shudder = FPS / 2;
 		c->points += score;
 		c->pointsY = self->y - 25;
-		c->pointsLife = FPS * 2;
+		c->pointsLife = FPS * 2 = NULL;
 
 		other->dead = 1;
 
@@ -155,7 +155,7 @@ static void touch(Entity *self, Entity *other)
 
 static void die(Entity *self)
 {
-	Chimney *c;
+	Chimney *c = NULL;
 
 	c = (Chimney *)self->data;
 
