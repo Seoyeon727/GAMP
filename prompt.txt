@@ -1,0 +1,65 @@
+# Title: GaDaero's Journey: ChiSam's Big Adventure
+
+# Game Overview:
+GaDaero's Journey: ChiSam's Big Adventure is a dynamic infinite-run game that combines fast-paced action with various life choices, offering a unique gaming experience. Players control ChiSam, the school's former mascot cat, as he overcomes various challenges to regain his popularity and status.
+
+# Key Features:
+
+## Life Choices and Growth System:
+1. During the game, choosing different paths will automatically determine ChiSam's growth, profession, and abilities.
+   - For example, obtaining a "Magic Book" will turn ChiSam into a "Wizard," while obtaining a "Hammer" will turn him into an "Engineer."
+
+## Path-Based Choices:
+1. At various branching points, players can move left, right, up, or down to choose their desired path.
+   - Each path offers unique themes and events that affect the game's progression.
+
+## Item-Based Choices:
+1. Collecting items along the paths will change ChiSam's abilities and stats.
+   - For example, "Churu" restores health, and "Ribbon" increases popularity.
+
+## Mini Games and Quests:
+1. The game includes mini-games and quests based on school activities.
+   - For example, "Catch the Pig" at Hanam Dwaejijip and "Catch the Fish" at Ddabung Bungeoppang are mini-boss encounters.
+
+# Game Setup and Mechanisms:
+## Start and End:
+1. Game Start: ChiSam starts from home and must reach school within a certain time.
+2. Character Setup: Players control ChiSam, who has a unique backstory and traits.
+
+## Path Selection:
+1. Various Paths: Players can choose between fast, direct routes or indirect, eventful routes.
+   - Each route offers unique events and encounters.
+
+## Events and Choices:
+1. Participate in Events: Depending on the path, various events (slow walking competition, getting lost, meeting friends) occur.
+2. Impact of Decisions: Choices affect ChiSam's academic performance, popularity, coins, and stress levels.
+
+# Stats System:
+1. Health: ChiSam's physical survival.
+2. Stress: ChiSam's psychological state.
+3. Popularity: ChiSam's social influence.
+4. Academic Performance: ChiSam's academic grades or knowledge.
+
+# Background Story:
+With advancements in biotechnology, new traits emerged in sheep, resulting in small, cute sheep becoming popular pets. Consequently, sheep rose as new mascots, diminishing the status of cats. ChiSam, once a beloved mascot at Catholic University, now finds himself a stray near Bupyeong Station. ChiSam must overcome this crisis and return to his former glory.
+
+# Project Requirements:
+1. The solution and project files must be easy for users to modify or create.
+2. The project should be structured to allow developers to easily add story elements. Use //todo comments to mark where story elements should be added.
+3. The project should be developed using SDL2, SDL2_image, SDL2_mixer, and SDL2_ttf.
+4. Images should be located in ../img, and sounds in ../sounds.
+
+# Instructions for Developers:
+1. Path, item, and event story elements should be added using //todo comments in the code.
+2. Implement graphics, sound, and text rendering using SDL2, SDL2_image, SDL2_mixer, and SDL2_ttf.
+3. Load images from ../img and sounds from ../sounds directories.
+
+# Example Code Snippet for Item Collection:
+//todo: Add item collection logic here
+if (item.type == "churu") {
+    chihsami.health += 10;
+    //todo: Add logic for churu item collection
+} else if (item.type == "ribbon") {
+    chihsami.popularity += 5;
+    //todo: Add logic for ribbon item collection
+}
