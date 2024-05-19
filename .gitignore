@@ -40,3 +40,26 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio 관련 파일들 무시
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sdf
+*.opensdf
+*.sdfold
+*.pdb
+*.tlog
+*.log
+*.cache
+*.ilk
+*.ipch
+*.iobj
+*.ipdb
+*.obj
+*.tlog
+*.VC.db
+*.VC.opendb
+*.idb

@@ -1,0 +1,3 @@
+C:/Users/rlarl/Documents/GitHub/GAMP/santa15_Lin/build_mingw/CMakeFiles/santa15.dir
+C:/Users/rlarl/Documents/GitHub/GAMP/santa15_Lin/build_mingw/CMakeFiles/edit_cache.dir
+C:/Users/rlarl/Documents/GitHub/GAMP/santa15_Lin/build_mingw/CMakeFiles/rebuild_cache.dir

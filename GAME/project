@@ -1,0 +1,16 @@
+- src
+  - main.cpp
+  - game.cpp
+  - character.cpp
+  - item.cpp
+  - path.cpp
+  - event.cpp
+- include
+  - game.h
+  - character.h
+  - item.h
+  - path.h
+  - event.h
+- img
+- sounds
+- CMakeLists.txt
