@@ -5,6 +5,7 @@
 #include "Button.h"
 #include "Enemy.h"
 #include "Character.h"
+#include "State.h"
 
 bool Init();
 bool LoadMedia();

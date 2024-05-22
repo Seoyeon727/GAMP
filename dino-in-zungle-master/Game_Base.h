@@ -69,6 +69,15 @@ const int PAUSE_BUTTON_POSY = 29;
 const int CONTINUE_BUTTON_POSX = 31;
 const int CONTINUE_BUTTON_POSY = 29;
 
+const int HEALTH_STATE_POSX = 50;
+const int HEALTH_STATE_POSY = 5;
+const int INTELLIGENCE_STATE_POSX = 100;
+const int INTELLIGENCE_STATE_POSY = 0;
+const int STRESS_STATE_POSX = 200;
+const int STRESS_STATE_POSY = 0;
+const int CHARM_STATE_POSX = 300;
+const int CHARM_STATE_POSY = 0;
+
 const int TEXT_1_POSX = 670;
 const int TEXT_1_POSY = 20;
 const int TEXT_2_POSX = 670;
@@ -92,12 +101,21 @@ const int RUNNING_FRAMES = 6;
 const int FLYING_FRAMES = 5;
 const int BACKGROUND_LAYER = 9;
 
+
 enum ButtonSprite
 {
 	BUTTON_MOUSE_OUT = 0,
 	BUTTON_MOUSE_OVER = 1,
 	BUTTON_TOTAL = 2
 };
+
+enum StateSprite
+{
+	STATE_BAD= 0,
+	STATE_GOOD = 1,
+	STATE_TOTAL = 2
+};
+
 
 void LogError(std::string msg, int error_code = SDL_ERROR);
 

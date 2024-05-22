@@ -37,6 +37,11 @@ SDL_Rect gPlayAgainButton[BUTTON_TOTAL];
 SDL_Rect gCharacterClips[RUNNING_FRAMES];
 SDL_Rect gEnemyClips[FLYING_FRAMES];
 
+SDL_Rect gHealthState[BUTTON_TOTAL];
+SDL_Rect gIntelligenceState[BUTTON_TOTAL];
+SDL_Rect gStressState[BUTTON_TOTAL];
+SDL_Rect gCharmState[BUTTON_TOTAL];
+
 LTexture gMenuTexture;
 LTexture gInstructionTexture;
 LTexture gBackgroundTexture[BACKGROUND_LAYER];
@@ -54,12 +59,22 @@ LTexture gScoreTexture;
 LTexture gText2Texture;
 LTexture gHighScoreTexture;
 
+LTexture gHealthStateTexture;
+LTexture gIntelligenceStateTexture;
+LTexture gStressStateTexture;
+LTexture gCharmStateTexture;
+
 Button PlayButton(PLAY_BUTON_POSX, PLAY_BUTTON_POSY);
 Button HelpButton(HELP_BUTTON_POSX, HELP_BUTTON_POSY);
 Button ExitButton(EXIT_BUTTON_POSX, EXIT_BUTTON_POSY);
 Button BackButton(BACK_BUTTON_POSX, BACK_BUTTON_POSY);
 Button PauseButton(PAUSE_BUTTON_POSX, PAUSE_BUTTON_POSY);
 Button ContinueButton(CONTINUE_BUTTON_POSX, CONTINUE_BUTTON_POSY);
+
+State HealthState(HEALTH_STATE_POSX, HEALTH_STATE_POSY);
+State IntelligenceState(INTELLIGENCE_STATE_POSX, INTELLIGENCE_STATE_POSY);
+State StressState(STRESS_STATE_POSX, STRESS_STATE_POSY);
+State CharmState(CHARM_STATE_POSX, CHARM_STATE_POSY);
 
 Character character;
 
@@ -170,6 +185,8 @@ int main(int argc, char* argv[])
 						RenderScrollingBackground(OffsetSpeed_Bkgr, gBackgroundTexture, gRenderer);
 						RenderScrollingGround(OffsetSpeed_Ground, acceleration, gGroundTexture, gRenderer);
 
+						SDL_Rect* currentClip_Health = &gHealthState[HealthState.currentSprite];
+						HealthState.Render(currentClip_Health, gRenderer, gHealthStateTexture);
 
 						character.Move();
 						SDL_Rect* currentClip_Character = nullptr;
@@ -466,6 +483,22 @@ bool LoadMedia()
 				}
 			}
 
+			if (!gHealthStateTexture.LoadFromFile("imgs/states/health_good.png", gRenderer))
+			{
+				std::cout << "Failed to load states image " << std::endl;
+				success = false;
+			}
+			else
+			{
+				for (int i = 0; i < STATE_TOTAL; ++i)
+				{
+					gHealthState[i].x = 100 * i;
+					gHealthState[i].y = 0;
+					gHealthState[i].w = 100;
+					gHealthState[i].h = 100;
+				}
+			}
+
 			for (int i = 0; i < BACKGROUND_LAYER; ++i)
 			{
 				if (!gBackgroundTexture[i].LoadFromFile(LAYER[i].c_str(), gRenderer))
@@ -546,6 +579,10 @@ void Close()
 	gScoreTexture.Free();
 	gText2Texture.Free();
 	gHighScoreTexture.Free();
+	gHealthStateTexture.Free();
+	gIntelligenceStateTexture.Free();
+	gStressStateTexture.Free();
+	gCharmStateTexture.Free();
 
 	for (int i = 0; i < BACKGROUND_LAYER; ++i)
 	{
